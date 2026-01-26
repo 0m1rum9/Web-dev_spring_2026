@@ -1,0 +1,30 @@
+body {
+  color: yellow;
+  background-color: black;
+}
+
+h1 {
+  color: red;
+  font-size: 200px;
+}
+
+#lang {
+  color: darkgreen;
+}
+
+.link:hover {
+  color: red;
+  background-color: blue;
+}
+
+table,
+th,
+tr,
+td {
+  border: 2px solid red;
+}
+
+li {
+  margin-left: 100px;
+  list-style-type: square;
+}
