@@ -1,0 +1,92 @@
+.left {
+  width: 45%;
+  align-items: left;
+}
+
+.row {
+  margin-left: 7vh;
+  align-items: stretch;
+  margin-top: 27vh;
+  display: flex;
+  height: 100vh;
+}
+
+body {
+  background-color: #F2F4F7;
+  font-family: SFProDisplay-Regular, Arial, Helvetica;
+}
+
+#connect {
+  margin-top: 0;
+  font-size: 28px;
+  margin-left: 4vh;
+}
+
+img {
+  margin-bottom: -2vh;
+  vertical-align: bottom;
+  width: 45vh;
+}
+
+
+.right {
+  margin-left: auto;
+  margin-right: 15vh;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 55vh;
+  height: 47vh;
+  margin-top: -5vh;
+}
+
+#email {}
+
+input {
+  margin-left: 5px;
+  height: 3vh;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  width: 87%;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+.log-in {
+  background-color: #0866ff;
+  width: 87%;
+  margin-left: 8px;
+  border-radius: 6px;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.create-acc {
+  background-color: #42b72a;
+
+  width: 55%;
+  margin-left: 70px;
+  border-radius: 6px;
+  padding: 0 16px;
+  height: 40px;
+  text-align: center;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 20px;
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  margin-left: 110px;
+}
+
+hr {
+  width: 300px;
+  color: #F2F4F7;
+}
