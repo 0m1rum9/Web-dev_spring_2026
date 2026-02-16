@@ -1,0 +1,15 @@
+<style>
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 0fr);
+    gap: 0;
+    column-gap: 0;
+  }
+</style>
+
+<div class="container text-center products-grid" style="margin-top: 2%; display: grid; gap: 0;">
+
+  @for (product of products; track product.id) {
+  <app-product-card-component [product]="product" style="margin: 0;width: 100%; display: block;" />
+  }
+</div>
