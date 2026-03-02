@@ -1,0 +1,20 @@
+@if(album$ | async; as album) {
+
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Title: {{title()}}</li>
+      <li class="list-group-item">{{album.id}}</li>
+      <li class="list-group-item">{{album.userId}}</li>
+    </ul>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInputGroup1" placeholder="title" [value]="title()"
+        (input)="change($event)">
+    </div>
+    <a class="btn btn-outline-success" (click)="save()">Save</a>
+    <a class="btn btn-outline-primary" [routerLink]="['/albums', album.id, 'photos']">View photos </a>
+    <a class="btn btn-outline-dark" [routerLink]="['/albums']">Back</a>
+  </div>
+</div>
+
+}

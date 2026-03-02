@@ -1,0 +1,32 @@
+<style>
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 0fr);
+    gap: 0;
+    column-gap: 0;
+  }
+
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  input {
+
+    width: calc(100% - 60px);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-right: 5px;
+  }
+</style>
+<div class="container text-center products-grid" style="margin-top: 2%; display: grid; gap: 0;">
+  @for(album of albums$ | async; track album.id) {
+  <app-album-overview-component [album]="album" (deleteId)="delete($event)" />
+  }
+
+</div>
