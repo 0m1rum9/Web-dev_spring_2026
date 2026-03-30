@@ -10,7 +10,22 @@ from api.models import Category, Product
 @method_decorator(csrf_exempt, name="dispatch")
 class ProductView(View):
     def get(self, request: HttpRequest):
-        return JsonResponse(list(Product.objects.values()), status=200, safe=False)
+        filters = {
+            "category_id": request.GET.get("category"),
+            "is_active": None,
+            "name": request.GET.get("search"),
+        }
+        if request.GET.get("active") == "false":
+            filters["is_active"] = False
+        elif request.GET.get("active") == "true":
+            filters["is_active"] = True
+
+        for key in list(filters.keys()):
+            if filters[key] is None:
+                filters.pop(key)
+        return JsonResponse(
+            list(Product.objects.filter(**filters).values()), status=200, safe=False
+        )
 
     def post(self, request: HttpRequest):
         try:
